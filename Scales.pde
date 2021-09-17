@@ -1,6 +1,7 @@
 void setup() {
-  size(700, 700);
+  size(800, 700);
   background(25,135,185);
+  noLoop();
 }
 
 void draw() {
@@ -9,10 +10,15 @@ void draw() {
       scale(x, y);
     }
   }
-  for (int a = -40;a < 900; a = a + 40) {
-    for (int b = -40;b <900;b = b + 60) {
-      overlay(a, b);
-}
+  //for (int a = -40; a < 900; a = a + 40) {
+  //  for (int b = -40; b <900; b = b + 60) {
+  //    overlay(a, b);
+  //  }
+  //}
+  for (int c = -90; c < 900; c = c + 40) {
+    for (int d = -90; d <900; d = d + 40) {
+      scalar(c, d);
+    }
   }
 }
 
@@ -34,6 +40,7 @@ void scale(int x,int y){
   stroke(0);
 }
 
+
 void overlay(int a,int b){
   noFill();
   strokeWeight(2);
@@ -49,3 +56,15 @@ void overlay(int a,int b){
   endShape();
 }
 
+void scalar(int c, int d){
+  noStroke();
+  strokeWeight(3);
+  stroke(70);
+  beginShape();
+  curveVertex(c,d);
+  curveVertex(c+60,d+70);
+  curveVertex(c+100,d+110);
+  curveVertex(c+140,d+70);
+  curveVertex(c+180,d);
+  endShape();
+}
