@@ -34,7 +34,7 @@ void scale(int x,int y){
   endShape();
   noFill();
   stroke(115,170,195);
-  strokeWeight(3);
+  strokeWeight(4);
   bezier(x,y,x+35,y+35,x+35,y+5,x+40,y+40 );
   bezier(x,y,x-35,y-35,x-35,y-5,x-40,y-40);
   stroke(0);
